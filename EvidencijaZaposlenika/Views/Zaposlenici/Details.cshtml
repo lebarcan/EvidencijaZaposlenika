@@ -1,0 +1,53 @@
+﻿@model EvidencijaZaposlenika.Models.Zaposlenik
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h3>Detalji o zaposleniku</h3>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Prezime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Prezime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pozicija)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pozicija)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ured)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ured)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Kontakt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Kontakt)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Uredi</a> |
+    <a asp-action="Index" class="btn btn-secondary">Vrati se na listu &nbsp;<i class="fas fa-table"></i></a>
+</div>

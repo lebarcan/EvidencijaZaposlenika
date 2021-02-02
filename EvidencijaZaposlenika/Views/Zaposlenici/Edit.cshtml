@@ -1,0 +1,57 @@
+﻿@model EvidencijaZaposlenika.Models.Zaposlenik
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h3>Uredi</h3>
+<br />
+
+<h4>Zaposlenik</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Ime" class="control-label"></label>
+                <input asp-for="Ime" class="form-control" />
+                <span asp-validation-for="Ime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prezime" class="control-label"></label>
+                <input asp-for="Prezime" class="form-control" />
+                <span asp-validation-for="Prezime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pozicija" class="control-label"></label>
+                <input asp-for="Pozicija" class="form-control" />
+                <span asp-validation-for="Pozicija" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ured" class="control-label"></label>
+                <input asp-for="Ured" class="form-control" />
+                <span asp-validation-for="Ured" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kontakt" class="control-label"></label>
+                <input asp-for="Kontakt" class="form-control" />
+                <span asp-validation-for="Kontakt" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="submit" value="Spremi" class="btn btn-primary btn-block" />
+                </div>
+                <div class="form-group col-md-6">
+                    <a asp-action="Index" class="btn btn-secondary btn-block">Vrati se na listu&nbsp;<i class="fas fa-table"></i></a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
